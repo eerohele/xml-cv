@@ -1,0 +1,161 @@
+body {
+  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  transition: all 250ms ease-in-out;
+  color: rgb(65, 182, 196);
+  border-bottom: 1px solid rgba(65, 182, 196, 0.25);
+}
+
+a:hover {
+  border-bottom-color: rgba(127, 205, 187, 0.25);
+  color: rgb(127, 205, 187);
+}
+
+header, footer {
+  background: #f7f7f7;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+  padding-top: 36px;
+  margin-bottom: 36px;
+}
+
+header .container div {
+  height: 80px;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  font-size: 1.25rem;
+  padding: 6px 0;
+  text-align: center;
+}
+
+footer ul {
+  margin: 0;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li:not(:last-child):after {
+  color: #999;
+  content: "·";
+  padding-left: 12px;
+  margin-right: 12px;
+}
+
+footer .disclaimer {
+  margin: 12px 0;
+  color: #999;
+  font-style: italic;
+}
+
+.personalInfo, .container {
+  max-width: 800px;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+h1 {
+  color: #555;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+
+h6 {
+  color: #999;
+  letter-spacing: normal;
+  margin-bottom: 0;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: #999;
+  font-size: 70%;
+  margin-left: 12px;
+  letter-spacing: normal;
+}
+
+.picture {
+  border-radius: 50%;
+  margin-right: 24px;
+  float: left;
+  max-width: 80px;
+}
+
+.email, .phoneNumber, .location {
+  display: inline;
+}
+
+.email, .phoneNumber {
+  margin-right: 1rem;
+  margin-left: 3px;
+}
+
+.phoneNumber {
+  color: #666;
+}
+
+.location {
+  color: #999;
+}
+
+.personalInfo .summary {
+  color: #666;
+  font-size: 1.75rem;
+  margin-top: 24px;
+}
+
+.skills .skill {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+dl {
+  -moz-column-count: 4;
+  -webkit-column-count: 4;
+  column-count: 4;
+}
+
+dt {
+  color: #999;
+  font-size: 20px;
+}
+
+dd {
+  margin: 0 0 12px 0;
+}
+
+.date {
+  color: #999;
+  margin-bottom: 0;
+  margin-top: 24px;
+  font-size: 1.25rem;
+}
+
+.project {
+  margin-bottom: 24px;
+}
+
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+  margin-bottom: 24px;
+}

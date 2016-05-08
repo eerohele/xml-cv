@@ -1,0 +1,84 @@
+grammar {
+  start = element cv {
+    attribute xml:lang { text },
+
+    element personalInfo {
+      element name { text },
+      element email { text },
+
+      element phoneNumber {
+        xsd:string { pattern = "\+[\d\s]+" }
+      },
+
+      element location { text },
+
+      element picture {
+        attribute href { xsd:anyURI }
+      },
+
+      element summary { text }
+    },
+
+    element education { educationPeriod+ },
+    element experience { workPeriod+ },
+    element skills { levels },
+    element openSource { project+ },
+    element languageSkills { language+ },
+    element socialMedia {
+      element site {
+        attribute href { xsd:anyURI },
+        text
+      }+
+    }
+  }
+
+  language = element language {
+    attribute name { text },
+    attribute proficiency { text }
+  }
+
+  project = element project {
+    element name { text },
+    element site { xsd:anyURI },
+
+    element languages {
+      element language { text }+
+    },
+
+    description*
+  }
+
+  levels = (
+      element expert { skill+ }
+    | element advanced { skill+ }
+    | element intermediate { skill+ }
+    | element basic { skill+ }
+  )*
+
+  skill = element skill { text }
+
+  educationPeriod = element period {
+    attribute startDate { xsd:date },
+    attribute endDate { xsd:date }?,
+    element institution { text },
+    element degree { text },
+    description
+  }
+
+  workPeriod = element period {
+    attribute startDate { xsd:date },
+    attribute endDate { xsd:date }?,
+    element employer { text },
+    element role { text },
+    description
+  }
+
+  description = element description {
+    mixed { a* }
+  }
+
+  a = element a {
+    attribute href { xsd:anyURI },
+    text
+  }
+}
